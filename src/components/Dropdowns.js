@@ -1,6 +1,17 @@
-function Dropdowns() {
+function Dropdowns({ setGreased}) {
+    function handleStatus(e) {
+        setGreased(e.target.value)
+    }
+
     return(
-        <div></div>
+        <form>
+            <select onChange={handleStatus} name="greaseFilter">
+                <option value="all">All</option>
+                <option value="true">Greased</option>
+                <option value="false">Not greased</option>
+            </select>
+
+        </form>
     )
 }
 
