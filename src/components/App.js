@@ -7,13 +7,14 @@ import hogs from "../porkers_data";
 
 function App() {
   const [greased, setGreased] = useState("all");
+  const [sortBy, setSortBy] = useState("name");
 
   return (
     <div className="App">
       <Nav />
-      <Dropdowns setGreased={setGreased} />
+      <Dropdowns setGreased={setGreased} setSortBy={setSortBy} />
       <hr/>
-      <HogsList hogs={hogs} greased={greased} />
+      <HogsList hogs={hogs} greased={greased} sortBy={sortBy} />
     </div>
   );
 }
